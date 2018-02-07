@@ -1,4 +1,5 @@
 <?php
+
 class Measure {
     public $id;
     public $datetime;

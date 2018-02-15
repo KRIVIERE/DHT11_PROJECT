@@ -1,8 +1,4 @@
 <?php
-/*include '../classes/dao/DaoBase.php';
-include '../classes/domain/Measure.php';
-include '../classes/dao/MeasureDao.php';*/
-
 include '../inc/autoload.inc.php';
 
 use dao\MeasureDao;

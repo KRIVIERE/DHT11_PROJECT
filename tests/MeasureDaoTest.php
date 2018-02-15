@@ -54,6 +54,14 @@ class MeasureDaoTest extends TestCase
         $this->assertEquals("1879-03-14 00:00:00", $measures[1]->datetime);
         $this->assertEquals(20, $measures[1]->temperature);
         $this->assertEquals(25, $measures[1]->humidite);
+
+        $this->assertEquals("1879-03-14 00:00:00", $measures[1]->datetime);
+        $this->assertEquals(46, $measures[2]->temperature);
+        $this->assertEquals(46, $measures[2]->humidite);
+
+        $this->assertEquals("1879-03-14 00:00:00", $measures[1]->datetime);
+        $this->assertEquals(23, $measures[3]->temperature);
+        $this->assertEquals(23, $measures[3]->humidite);
     }
 
     public function testReadMeasureById()

@@ -108,8 +108,8 @@ class MeasureDaoTest extends TestCase
 
         $this->measureDao->deleteMeasure($id);
 
-        $deletedUser = $this->measureDao->readMeasureById($id);
+        $deletedMeasure = $this->measureDao->readMeasureById($id);
 
-        $this->assertNull($deletedUser);
+        $this->assertNull($deletedMeasure);
     }
 }

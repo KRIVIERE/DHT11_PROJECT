@@ -1,5 +1,7 @@
 <?php
-include 'DaoBase.php';
+namespace dao;
+
+use domain\Measure;
 
 class MeasureDao extends DaoBase{
     public function __construct($config) {

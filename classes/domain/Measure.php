@@ -1,4 +1,5 @@
 <?php
+namespace domain;
 
 class Measure {
     public $id;

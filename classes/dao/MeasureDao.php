@@ -36,7 +36,7 @@ class MeasureDao extends DaoBase{
             $temperature = $datas['temperature'];
             $humidite = $datas['humidite'];
 
-            $measure = new Measure($id, $datetime, $temperature, $humidite);
+            $measure = new Measure($datetime, $temperature, $humidite);
 
             $result[] = $measure;
         }
@@ -45,6 +45,8 @@ class MeasureDao extends DaoBase{
     }
 
     public function readMeasureById($id) {
+        $result = null;
+
         $query = $this->bdd->prepare("SELECT id, datetime, temperature, humidite FROM releve WHERE id = :id");
 
         $query->bindParam(":id", $id);
@@ -56,7 +58,7 @@ class MeasureDao extends DaoBase{
                 $temperature = $datas['temperature'];
                 $humidite = $datas['humidite'];
 
-                $result = new Measure($id, $datetime, $temperature, $humidite);
+                $result = new Measure($datetime, $temperature, $humidite);
             }
         }
 
